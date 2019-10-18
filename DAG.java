@@ -29,4 +29,61 @@ public class DAG {
         }
 
     }
+
+    public int V(){
+        return V;
+    }
+
+    public int E(){
+        return E;
+    }
+
+    //Check vertex fits size of the graph
+    public boolean validateVertex(int v){
+        if (v > 0 && v <= this.V){
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    public boolean addEdge(int from, int to){
+        if (validateVertex(from) && validateVertex(to)){
+            adj[from].add(to);  
+            indegree[to]++;     
+            E++;
+            return true;
+        }else{
+            System.out.println("Please enter vertices which exist within the graph");
+            return false;
+        }
+    }
+
+
+    //Return edges point to node
+    public int indegree(int v){
+        if (!validateVertex(v)){
+            return -1;
+        } else {
+            return this.indegree[v];
+        }
+    }
+
+  
+    //Returns edges from node
+    public int outdegree(int v){
+        if (!validateVertex(v)){          
+            return -1;
+        } else {
+            return this.adj[v].size();
+        }
+    }
+
+
+
+    //Return list of adjacent vertices in adj
+    public Iterable<Integer> adj(int v){
+        return adj[v];
+    }
+
 }
