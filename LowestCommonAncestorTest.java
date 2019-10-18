@@ -16,13 +16,13 @@ class LowestCommonAncestorTest {
 	@Test
 	void testNotRoot() {
 		LowestCommonAncestor tree = new LowestCommonAncestor(); 
-        tree.root = new Node(1); 
-        tree.root.left = new Node(2); 
-        tree.root.right = new Node(3); 
-        tree.root.left.left = new Node(4); 
-        tree.root.left.right = new Node(5); 
-        tree.root.right.left = new Node(6); 
-        tree.root.right.right = new Node(7); 
+        	tree.root = new Node(1); 
+        	tree.root.left = new Node(2); 
+        	tree.root.right = new Node(3); 
+        	tree.root.left.left = new Node(4); 
+       		tree.root.left.right = new Node(5); 
+        	tree.root.right.left = new Node(6); 
+        	tree.root.right.right = new Node(7); 
         
 		assertEquals(tree.findLCA(4,5), 2);
 	}
@@ -31,13 +31,13 @@ class LowestCommonAncestorTest {
 	@Test
 	void testIsRoot() {
 		LowestCommonAncestor tree = new LowestCommonAncestor(); 
-        tree.root = new Node(1); 
-        tree.root.left = new Node(2); 
-        tree.root.right = new Node(3); 
-        tree.root.left.left = new Node(4); 
-        tree.root.left.right = new Node(5); 
-        tree.root.right.left = new Node(6); 
-        tree.root.right.right = new Node(7); 
+        	tree.root = new Node(1); 
+        	tree.root.left = new Node(2); 
+        	tree.root.right = new Node(3); 
+        	tree.root.left.left = new Node(4); 
+        	tree.root.left.right = new Node(5); 
+        	tree.root.right.left = new Node(6); 
+        	tree.root.right.right = new Node(7); 
         
 		assertEquals(tree.findLCA(4,6), 1);
 	}
@@ -46,13 +46,13 @@ class LowestCommonAncestorTest {
 	@Test
 	void testIsNode1() {
 		LowestCommonAncestor tree = new LowestCommonAncestor(); 
-        tree.root = new Node(1); 
-        tree.root.left = new Node(2); 
-        tree.root.right = new Node(3); 
-        tree.root.left.left = new Node(4); 
-        tree.root.left.right = new Node(5); 
-        tree.root.right.left = new Node(6); 
-        tree.root.right.right = new Node(7); 
+        	tree.root = new Node(1); 
+        	tree.root.left = new Node(2); 
+        	tree.root.right = new Node(3); 
+        	tree.root.left.left = new Node(4); 
+        	tree.root.left.right = new Node(5); 
+        	tree.root.right.left = new Node(6); 
+        	tree.root.right.right = new Node(7); 
         
 		assertEquals(tree.findLCA(3,7), 3);
 	}
@@ -61,13 +61,13 @@ class LowestCommonAncestorTest {
 	@Test
 	void testIsNode2() {
 		LowestCommonAncestor tree = new LowestCommonAncestor(); 
-        tree.root = new Node(1); 
-        tree.root.left = new Node(2); 
-        tree.root.right = new Node(3); 
-        tree.root.left.left = new Node(4); 
-        tree.root.left.right = new Node(5); 
-        tree.root.right.left = new Node(6); 
-        tree.root.right.right = new Node(7); 
+        	tree.root = new Node(1); 
+        	tree.root.left = new Node(2); 
+        	tree.root.right = new Node(3); 
+        	tree.root.left.left = new Node(4); 
+        	tree.root.left.right = new Node(5); 
+        	tree.root.right.left = new Node(6); 
+        	tree.root.right.right = new Node(7); 
         
 		assertEquals(tree.findLCA(6,3), 3);
 	}
@@ -77,11 +77,11 @@ class LowestCommonAncestorTest {
 	@Test
 	void testAllRight() {
 		LowestCommonAncestor tree = new LowestCommonAncestor(); 
-        tree.root = new Node(1); 
-        tree.root.right = new Node(2); 
-        tree.root.right.right = new Node(3); 
-        tree.root.right.right.right = new Node(4); 
-        tree.root.right.right.right.right = new Node(5); 
+        	tree.root = new Node(1); 
+        	tree.root.right = new Node(2); 
+        	tree.root.right.right = new Node(3); 
+        	tree.root.right.right.right = new Node(4); 
+        	tree.root.right.right.right.right = new Node(5); 
         
 		assertEquals(tree.findLCA(4,5), 4);
 	}
@@ -90,11 +90,11 @@ class LowestCommonAncestorTest {
 	@Test
 	void testBTLeft() {
 		LowestCommonAncestor tree = new LowestCommonAncestor(); 
-        tree.root = new Node(1); 
-        tree.root.left = new Node(2); 
-        tree.root.left.left = new Node(3); 
-        tree.root.left.left.left = new Node(4); 
-        tree.root.left.left.left.left = new Node(5); 
+        	tree.root = new Node(1); 
+        	tree.root.left = new Node(2); 
+        	tree.root.left.left = new Node(3); 
+        	tree.root.left.left.left = new Node(4); 
+        		tree.root.left.left.left.left = new Node(5); 
         
 		assertEquals(tree.findLCA(2,3), 2);
 	}
@@ -104,13 +104,13 @@ class LowestCommonAncestorTest {
 	@Test
 	void testNode2NotInBT() {
 		LowestCommonAncestor tree = new LowestCommonAncestor(); 
-        tree.root = new Node(1); 
-        tree.root.left = new Node(2); 
-        tree.root.right = new Node(3); 
-        tree.root.left.left = new Node(4); 
-        tree.root.left.right = new Node(5); 
-        tree.root.right.left = new Node(6); 
-        tree.root.right.right = new Node(7); 
+        	tree.root = new Node(1); 
+        	tree.root.left = new Node(2); 
+        	tree.root.right = new Node(3); 
+        	tree.root.left.left = new Node(4); 
+        	tree.root.left.right = new Node(5); 
+        	tree.root.right.left = new Node(6); 
+        	tree.root.right.right = new Node(7); 
         
 		assertEquals(tree.findLCA(2,9), -1);
 	}		
@@ -119,13 +119,13 @@ class LowestCommonAncestorTest {
 	@Test
 	void testNode1NotInBT() {
 		LowestCommonAncestor tree = new LowestCommonAncestor(); 
-        tree.root = new Node(1); 
-        tree.root.left = new Node(2); 
-        tree.root.right = new Node(3); 
-        tree.root.left.left = new Node(4); 
-        tree.root.left.right = new Node(5); 
-        tree.root.right.left = new Node(6); 
-        tree.root.right.right = new Node(7); 
+        	tree.root = new Node(1); 
+        	tree.root.left = new Node(2); 
+        	tree.root.right = new Node(3); 
+        	tree.root.left.left = new Node(4); 
+        	tree.root.left.right = new Node(5); 
+        	tree.root.right.left = new Node(6); 
+        	tree.root.right.right = new Node(7); 
         
 		assertEquals(tree.findLCA(0,4), -1);
 	}		
@@ -134,13 +134,13 @@ class LowestCommonAncestorTest {
 	@Test
 	void testNode1adn2NotInBT() {
 		LowestCommonAncestor tree = new LowestCommonAncestor(); 
-        tree.root = new Node(1); 
-        tree.root.left = new Node(2); 
-        tree.root.right = new Node(3); 
-        tree.root.left.left = new Node(4); 
-        tree.root.left.right = new Node(5); 
-        tree.root.right.left = new Node(6); 
-        tree.root.right.right = new Node(7); 
+        	tree.root = new Node(1); 
+        	tree.root.left = new Node(2); 
+        	tree.root.right = new Node(3); 
+        	tree.root.left.left = new Node(4); 
+        	tree.root.left.right = new Node(5); 
+        	tree.root.right.left = new Node(6); 
+        	tree.root.right.right = new Node(7); 
         
 		assertEquals(tree.findLCA(0,9), -1);
 	}
@@ -149,13 +149,13 @@ class LowestCommonAncestorTest {
 	@Test
 	void testNode1adn2asRoot() {
 		LowestCommonAncestor tree = new LowestCommonAncestor(); 
-        tree.root = new Node(1); 
-        tree.root.left = new Node(2); 
-        tree.root.right = new Node(3); 
-        tree.root.left.left = new Node(4); 
-        tree.root.left.right = new Node(5); 
-        tree.root.right.left = new Node(6); 
-        tree.root.right.right = new Node(7); 
+        	tree.root = new Node(1); 
+        	tree.root.left = new Node(2); 
+        	tree.root.right = new Node(3); 
+        	tree.root.left.left = new Node(4); 
+       		tree.root.left.right = new Node(5); 
+        	tree.root.right.left = new Node(6); 
+        	tree.root.right.right = new Node(7); 
         
 		assertEquals(tree.findLCA(1,1), 1);
 	}
@@ -164,13 +164,13 @@ class LowestCommonAncestorTest {
 	@Test
 	void testNode1adn2asNegative() {
 		LowestCommonAncestor tree = new LowestCommonAncestor(); 
-        tree.root = new Node(1); 
-        tree.root.left = new Node(2); 
-        tree.root.right = new Node(3); 
-        tree.root.left.left = new Node(4); 
-        tree.root.left.right = new Node(5); 
-        tree.root.right.left = new Node(6); 
-        tree.root.right.right = new Node(7); 
+        	tree.root = new Node(1); 
+        	tree.root.left = new Node(2); 
+        	tree.root.right = new Node(3); 
+        	tree.root.left.left = new Node(4); 
+        	tree.root.left.right = new Node(5); 
+        	tree.root.right.left = new Node(6); 
+        	tree.root.right.right = new Node(7); 
         
 		assertEquals(tree.findLCA(-1,-15), -1);
 	}
