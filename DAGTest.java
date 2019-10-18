@@ -109,7 +109,6 @@ class DAGTest {
 		//out of range
 		assertEquals(test.findLCA(10, 7), -1);
 	}
-}
 
 	
 }
