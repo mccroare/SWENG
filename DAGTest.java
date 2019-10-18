@@ -46,5 +46,70 @@ class DAGTest {
 		
 	}
 
+	@Test
+	void testHasCycle() {
+		//test for an empty graph
+		DAG test = new DAG(8);
+		assertEquals("A cycle should not exist as there are no nodes", test.hasCycle(), false);
+		
+		//create a graph without a cycle
+		DAG test2 = new DAG(3);
+		test2.addEdge(0, 1);
+		test2.addEdge(1, 2);
+		assertEquals("A cycle does not exist within this graph", test2.hasCycle(), false);
+		
+		//create a graph with an obvious cycle
+		DAG test3 = new DAG(3);
+		test3.addEdge(0, 1);
+		test3.addEdge(1, 2);
+		test3.addEdge(2, 1);
+		test3.addEdge(2, 0);
+		
+		assertEquals("A cycle exists", test3.hasCycle(), true);
+	}
+
+	
+	@Test
+	void testHasCycle() {
+		//test for an empty graph
+		DAG test = new DAG(8);
+		assertEquals("A cycle should not exist as there are no nodes", test.hasCycle(), false);
+		
+		//create a graph without a cycle
+		DAG test2 = new DAG(3);
+		test2.addEdge(0, 1);
+		test2.addEdge(1, 2);
+		assertEquals("A cycle does not exist within this graph", test2.hasCycle(), false);
+		
+		//create a graph with an obvious cycle
+		DAG test3 = new DAG(3);
+		test3.addEdge(0, 1);
+		test3.addEdge(1, 2);
+		test3.addEdge(2, 1);
+		test3.addEdge(2, 0);
+		
+		assertEquals("A cycle exists", test3.hasCycle(), true);
+	}
+	
+	@Test 
+	void testLCA() {
+		//test for empty graph
+		DAG test = new DAG(8);
+		assertEquals(test.findLCA(5, 0), -1);
+		
+		//test graph 
+		test.addEdge(0, 1);
+		test.addEdge(0, 2);
+		test.addEdge(1, 3);
+		test.addEdge(0, 3);
+		test.addEdge(2, 3);
+		assertEquals(test.findLCA(1, 3), 0);
+		
+		
+		//out of range
+		assertEquals(test.findLCA(10, 7), -1);
+	}
+}
+
 	
 }

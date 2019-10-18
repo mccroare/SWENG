@@ -86,4 +86,106 @@ public class DAG {
         return adj[v];
     }
 
+
+
+    public boolean hasCycle(){ return this.hasCycle;}
+
+
+    public boolean findCycle(int v){
+        marked[v] = true;
+        stack[v] = true;
+
+        for (int i : adj(v)){
+            if (!marked[i]){
+                findCycle(i);
+            } 
+            else if (stack[i]){
+                hasCycle = true;
+                return true;    
+            }
+        }
+
+        stack[v] = false;
+        return false;
+    }
+
+
+    //Breadth First Search of DAG
+    public ArrayList<Integer> BFS(int source){
+        boolean visited[] = new boolean[this.V];
+
+        LinkedList<Integer> queue = new LinkedList<Integer>();
+        ArrayList<Integer> order = new ArrayList<Integer>();
+
+        visited[source] = true;
+
+        queue.add(source);
+
+
+        while (queue.size()!=0){
+            source = queue.poll();
+            order.add(source); 
+            
+            
+            Iterator<Integer> iter = adj(source).iterator();
+            while (iter.hasNext()){
+                int node = iter.next();
+                if (!visited[node]){
+                    visited[node] = true;
+                    queue.add(node);
+                }
+            }
+
+        }
+
+        return order;
+    }
+
+    
+
+    public DAG reverse(){
+        DAG reversedDAG = new DAG(this.V);
+        for (int i = 0; i < this.V; i++){
+            for (int j: adj(i)) {
+                reversedDAG.addEdge(j, i); 
+            }
+        }
+        return reversedDAG;
+    }
+
+    public int findLCA(int v1, int v2){
+        if (findCycle(0)){
+            System.out.println("Cycle found in the graph, graph is not a DAG");
+            return -1; 
+        }
+        
+        if (!this.validateVertex(v1) || !this.validateVertex(v2)) return -1;
+
+        DAG reversed = this.reverse();
+        ArrayList<Integer> v1Path = reversed.BFS(v1);
+        ArrayList<Integer> v2Path = reversed.BFS(v2);
+        ArrayList<Integer> commonAncestors = new ArrayList<Integer>();
+
+        boolean commonAncestorFound = false;
+
+        for (int i = 0; i < v1Path.size(); i++){
+            for (int j = 0; j < v2Path.size(); j++){
+                if (v1Path.get(i) == v2Path.get(j)){
+                    commonAncestors.add(v1Path.get(i));
+                    commonAncestorFound = true;
+                }
+            }
+        }
+
+        if (commonAncestorFound){
+            return commonAncestors.get(0); 
+        } else {
+            return -1; 
+        }
+        
+    }
+
+}
+
+
 }
