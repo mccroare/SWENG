@@ -3,6 +3,29 @@ import axios from 'axios';
 import Form from './components/Form.jsx';
 import ProfileDetails from './components/ProfileDetails.jsx';
 
+const mystyle = {
+  color: "white",
+  backgroundColor: "Black",
+  padding: "10px",
+  fontFamily: "Arial"
+};
+
+const headerStyle = {
+  color: "black",
+  backgroundColor: "MediumAquaMarine",
+  padding: "10px",
+  fontFamily: "Arial"
+};
+
+const headerSpecific = {
+  color: "white",
+  backgroundColor: "MediumAquaMarine",
+  padding: "10px",
+  fontFamily: "Arial",
+  textAlign: "center",
+  fontSize: "40px"
+}
+
 
 class App extends Component {
   constructor() {
@@ -31,29 +54,24 @@ handleFormChange(event) {
     this.setState(obj);
   };
 render() {
-      const mystyle = {
-      color: "white",
-      backgroundColor: "DodgerBlue",
-      padding: "10px",
-      fontFamily: "Arial"
-    };
       return(
-      <div className="App">
-        <header className="App-header">
-          <h1 style={mystyle} className="App-title"> GitHub Analytics</h1>
+      <div style={headerStyle} className="App">
+        <header style={headerSpecific} className="App-header">
+          <h1 className="App-title"> GitHub Analytics</h1>
         </header>
-        <p className="App-intro">
-          Watch this space...
-        </p>
-        <hr></hr>
-        <Form
-          formData={this.state.formData}
-          handleUserFormSubmit={this.handleUserFormSubmit}
-          handleFormChange={this.handleFormChange}
-        />
-        <hr></hr>
-        Profile Details:
-        <ProfileDetails infoclean={this.state.infoclean}/>
+        <h3><p style={mystyle} className="App-intro">
+          This site provides information on GitHub users accounts.
+        </p></h3>
+        <div>
+          <Form
+            formData={this.state.formData}
+            handleUserFormSubmit={this.handleUserFormSubmit}
+            handleFormChange={this.handleFormChange}
+          />
+        </div>
+        <div>
+          <ProfileDetails infoclean={this.state.infoclean}/>
+        </div>
 </div>
     );
   }

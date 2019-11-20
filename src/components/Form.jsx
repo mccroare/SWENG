@@ -1,9 +1,19 @@
 import React from 'react';
+
+const mystyle = {
+  color: "white",
+  backgroundColor: "Black",
+  padding: "10px",
+  fontFamily: "Arial",
+};
+
+
 const Form = (props) => {
+
   return (
-<form onSubmit={(event) => props.handleUserFormSubmit(event)}>
+<form style={mystyle} onSubmit={(event) => props.handleUserFormSubmit(event)}>
       <label>
-        <p>Search:</p>
+        <h2> Search</h2>
         <input name="username"
         type="text"
         placeholder="GitHub username"
