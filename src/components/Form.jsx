@@ -3,31 +3,32 @@ import React from 'react';
 const mystyle = {
   color: "white",
   backgroundColor: "Black",
-  padding: "10px",
   fontFamily: "Arial",
+  fontSize: "15px"
 };
 
 
 const Form = (props) => {
 
   return (
-<form style={mystyle} onSubmit={(event) => props.handleUserFormSubmit(event)}>
+<form class="form-inline" onSubmit={(event) => props.handleUserFormSubmit(event)}>
+    <div>
       <label>
-        <h2> Search</h2>
-        <input name="username"
+        <input class="form-control"
+        name="username"
         type="text"
-        placeholder="GitHub username"
+        placeholder="Search username"
         required
         value={props.formData.username}
         onChange={props.handleFormChange}
       />
-      </label>
-      <div>
       <input
+        class="form-control"
         type="submit"
         value="Submit"
       />
+      </label>
     </div>
-    </form>
+ </form>
 )};
 export default Form;

@@ -1,13 +1,15 @@
+import 'bootstrap/dist/css/bootstrap.min.css'
 import React, { Component } from 'react';
 import axios from 'axios';
 import Form from './components/Form.jsx';
 import ProfileDetails from './components/ProfileDetails.jsx';
 
 const mystyle = {
-  color: "white",
-  backgroundColor: "Black",
-  padding: "10px",
-  fontFamily: "Arial"
+  color: "grey",
+  padding: "60px",
+  fontFamily: "sans-serif",
+  fontSize: "25px",
+  textAlign: "center"
 };
 
 const headerStyle = {
@@ -19,11 +21,9 @@ const headerStyle = {
 
 const headerSpecific = {
   color: "white",
-  backgroundColor: "MediumAquaMarine",
   padding: "10px",
-  fontFamily: "Arial",
-  textAlign: "center",
-  fontSize: "40px"
+  fontFamily: "sans-serif",
+  fontSize: "45px"
 }
 
 
@@ -55,24 +55,27 @@ handleFormChange(event) {
   };
 render() {
       return(
-      <div style={headerStyle} className="App">
-        <header style={headerSpecific} className="App-header">
-          <h1 className="App-title"> GitHub Analytics</h1>
+      <div className="App">
+        <header className="App-header">
+          <nav class="navbar bg-warning navbar-dar">
+              <h1><a style={headerSpecific} class="navbar-brand" href="#">Github Analytics</a></h1>
+              <div>
+                <Form
+                  formData={this.state.formData}
+                  handleUserFormSubmit={this.handleUserFormSubmit}
+                  handleFormChange={this.handleFormChange}
+                />
+              </div>
+          </nav>
         </header>
-        <h3><p style={mystyle} className="App-intro">
-          This site provides information on GitHub users accounts.
-        </p></h3>
-        <div>
-          <Form
-            formData={this.state.formData}
-            handleUserFormSubmit={this.handleUserFormSubmit}
-            handleFormChange={this.handleFormChange}
-          />
+        <p class="container" style={mystyle} className="App-intro">
+          This site provides information on GitHub user accounts.
+        </p>
+          <div class="container">
+            <ProfileDetails infoclean={this.state.infoclean}/>
+          </div>
         </div>
-        <div>
-          <ProfileDetails infoclean={this.state.infoclean}/>
-        </div>
-</div>
+
     );
   }
 }
