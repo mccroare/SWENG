@@ -44,9 +44,8 @@ Note: this is a one-way operation. Once you eject, you can’t go back!
 
 
 ## Learn More
-You can learn more in the [Create React App documentation](https://create-react-app.dev/docs/getting-started/)
+- You can learn more in the [Create React App documentation](https://create-react-app.dev/docs/getting-started/)
 
-To learn React, check out the [React documentation](https://reactjs.org/)
+- To learn React, check out the [React documentation](https://reactjs.org/)
 
-
-To learn more about deployment, check out the [Deployment documentation](https://facebook.github.io/create-react-app/docs/deployment)
+- To learn more about deployment, check out the [Deployment documentation](https://facebook.github.io/create-react-app/docs/deployment)
