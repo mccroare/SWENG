@@ -1,12 +1,5 @@
 import React from 'react';
 
-const mystyle = {
-  color: "white",
-  backgroundColor: "Black",
-  fontFamily: "Arial",
-  fontSize: "15px"
-};
-
 
 const Form = (props) => {
 
