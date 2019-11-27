@@ -1,11 +1,14 @@
-# SWENG
+# Github Access and Social Graph
 
-Third year CSB module
-
-Lecturer: Prof Stephen Barrett
+Github Access web app was made using reactjs, bootstrap and D3.
 
 
-Course site: https://www.scss.tcd.ie/Stephen.Barrett/teaching/CS3012/
+# Running the App
+In order to run the app just clone the repo and type:
 
+npm start
 
-See github_analysis branch for github analysis and social graph commits.
+This runs the app in the development mode.
+Open http://localhost:3000 to view it in the browser.
+
+The page will reload if you make edits.
