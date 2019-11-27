@@ -1,6 +1,8 @@
 # Github Access and Social Graph
 Github Access web app was made using reactjs, bootstrap and D3.
 
+See [LDA readme](https://github.com/mccroare/SWENG/tree/github_analysis/src/lda) for lda breakdown.
+
 
 ## Running the App
 In order to run the app just clone the repo and type:
