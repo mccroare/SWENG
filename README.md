@@ -16,11 +16,14 @@ Open http://localhost:3000 to view it in the browser.
 
 The page will reload if you make edits.
 
+>
 ```
 npm test
 ```
 Launches the test runner in the interactive watch mode.
 See the section about running tests for more information.
+
+>
 ```
 npm run build
 ```
@@ -31,6 +34,8 @@ The build is minified and the filenames include the hashes.
 Your app is ready to be deployed!
 
 See the section about deployment for more information.
+
+>
 ```
 npm run eject
 ```
