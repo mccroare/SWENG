@@ -1,6 +1,6 @@
 # SWENG
 
-Third year CSB module
+#### Third year CSB module
 
 **Lecturer:** Prof Stephen Barrett
 
